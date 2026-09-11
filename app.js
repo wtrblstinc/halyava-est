@@ -10,7 +10,7 @@
 
 const OFFERS = [
   { rank: 1, name: 'ФОНБЕТ', logo: 'assets/logos/fonbet.png', category: 'Бездеп', hot: true, amount: '15 000 ₽', desc: '<b>Бездеп.</b> Фрибет за регистрацию и идентификацию. Депозит не нужен вообще. Самый жирный бесплатный кусок на рынке.' },
-  { rank: 2, name: 'WINLINE', logo: 'assets/logos/winline.png', category: 'Депозит', amount: '10 000 ₽', desc: 'До 10 фрибетов по 1 000 ₽ после верификации. Активация — депозит <b>от 1 000 ₽</b>.' },
+  { rank: 2, name: 'WINLINE', url: 'https://trk.ppdu.ru/click/OI6xwW8r?erid=2SDnjdDRjvV&sub1=fael&siteId=26790', logo: 'assets/logos/winline.png', category: 'Депозит', amount: '10 000 ₽', desc: 'До 10 фрибетов по 1 000 ₽ после верификации. Активация — депозит <b>от 1 000 ₽</b>.' },
   { rank: 3, name: 'BETBOOM', logo: 'assets/logos/betboom.png', category: 'Депозит', amount: '10 000 ₽', desc: '5 фрибетов на 10 000 ₽ за депозит <b>от 100 ₽</b> и оборот. Бонус: бездеп 1 000 ₽ в приложении по промокоду.' },
   { rank: 4, name: 'PARI', logo: 'assets/logos/pari.png', category: 'Депозит', amount: '5 000 ₽', desc: '5 фрибетов по 1 000 ₽ после идентификации и первого депозита <b>от 1 000 ₽</b>. Просто и по-честному.' },
   { rank: 5, name: 'БЕТСИТИ', logo: 'assets/logos/betcity.png', category: 'Бездеп', amount: '2 000 ₽', desc: '<b>Бездеп.</b> Фрибет до 2 000 ₽ после регистрации.' },
@@ -38,7 +38,7 @@ rowsEl.innerHTML = OFFERS.map((o, i) => `
       <div>
         <div class="row__inner">
           <p class="row__desc">${o.desc}</p>
-          <a class="row__cta" href="#" aria-label="Забрать бонус ${o.name}">ЗАБРАТЬ →</a>
+          <a class="row__cta" href="${o.url || '#'}" aria-label="Забрать бонус ${o.name}">ЗАБРАТЬ →</a>
         </div>
       </div>
     </div>
